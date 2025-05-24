@@ -5,14 +5,34 @@ function calcular() {
   let resultado;
 
   switch (op) {
-    case '+': resultado = n1 + n2; break;
-    case '-': resultado = n1 - n2; break;
-    case '*': resultado = n1 * n2; break;
-    case '/': resultado = n1 / n2; break;
+    case "+":
+      resultado = n1 + n2;
+      break;
+    case "-":
+      resultado = n1 - n2;
+      break;
+    case "*":
+      resultado = n1 * n2;
+      break;
+    case "/":
+      resultado = n1 / n2;
+      break;
   }
 
   document.getElementById("resultado").innerText = `Resultado: ${resultado}`;
 }
+
+// Historia de Usuario 4: División de dos números
+function dividir(a, b) {
+  if (b === 0) {
+    return "Error: no se puede dividir por cero";
+  }
+  return a / b;
+}
+
+// Prueba en consola
+console.log("Resultado de dividir 10 / 2:", dividir(10, 2));
+console.log("Resultado de dividir 10 / 0:", dividir(10, 0));
 
 // Historia de Usuario 3: Multiplicación de dos números
 function multiplicar(a, b) {
