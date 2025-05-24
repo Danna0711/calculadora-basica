@@ -13,6 +13,15 @@ function calcular() {
 
   document.getElementById("resultado").innerText = `Resultado: ${resultado}`;
 }
+
+// Historia de Usuario 2: Resta de dos números
+function restar(a, b) {
+  return a - b;
+}
+
+// Prueba en consola
+console.log("Resultado de restar 5 - 2:", restar(5, 2));
+
 // Historia de Usuario 1: Suma de dos números
 function sumar(a, b) {
   return a + b;
