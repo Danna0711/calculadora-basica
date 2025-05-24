@@ -4,19 +4,27 @@ function calcular() {
   const op = document.getElementById("operador").value;
   let resultado;
 
+  if (isNaN(n1) || isNaN(n2)) {
+    document.getElementById("resultado").innerText =
+      "Por favor ingresa ambos números.";
+    return;
+  }
+
   switch (op) {
     case "+":
-      resultado = n1 + n2;
+      resultado = sumar(n1, n2);
       break;
     case "-":
-      resultado = n1 - n2;
+      resultado = restar(n1, n2);
       break;
     case "*":
-      resultado = n1 * n2;
+      resultado = multiplicar(n1, n2);
       break;
     case "/":
-      resultado = n1 / n2;
+      resultado = dividir(n1, n2);
       break;
+    default:
+      resultado = "Operador inválido";
   }
 
   document.getElementById("resultado").innerText = `Resultado: ${resultado}`;
