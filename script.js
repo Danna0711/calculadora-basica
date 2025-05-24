@@ -13,3 +13,10 @@ function calcular() {
 
   document.getElementById("resultado").innerText = `Resultado: ${resultado}`;
 }
+// Historia de Usuario 1: Suma de dos números
+function sumar(a, b) {
+  return a + b;
+}
+
+// Prueba en consola
+console.log("Resultado de sumar 3 + 4:", sumar(3, 4));
